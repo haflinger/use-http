@@ -55,6 +55,7 @@
     "watch": "^1.0.2"
   },
   "scripts": {
+    "preinstall": "yarn build:production && yarn build:production:esm # runs before publish",
     "prepublishOnly": "yarn build:production && yarn build:production:esm # runs before publish",
     "build": "rm -rf dist/cjs && tsc --module CommonJS --outDir dist/cjs",
     "build:esm": "rm -rf dist/esm && tsc",
